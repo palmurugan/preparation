@@ -1,2 +1,13 @@
 https://medium.com/@bcarunmail/securing-rest-api-using-keycloak-and-spring-oauth2-6ddf3a1efcc2
 https://www.baeldung.com/spring-boot-keycloak
+
+-- Spring boot keycloak
+https://www.thomasvitale.com/spring-boot-keycloak-security/
+
+-- Spring security authorities setup
+https://www.baeldung.com/role-and-privilege-for-spring-security-registration
+
+
+
+--- Keycloak
+  -Djboss.socket.binding.port-offset=1000 // To change the port = 8080 + 1000 = 9080

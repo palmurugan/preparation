@@ -1,0 +1,12 @@
+## Keycloak admin client
+https://gist.github.com/thomasdarimont/c4e739c5a319cf78a4cff3b87173a84b
+
+## Keycloak REST Templete
+https://stackoverflow.com/questions/54712132/how-to-authenticate-a-backend-to-backend-with-spring-boot-keycloak
+https://github.com/CodingSpiderFox/keycloak-backend-to-backend-mcve
+
+## Kafka
+https://reflectoring.io/spring-boot-kafka/
+https://github.com/thombergs/code-examples/tree/master/spring-boot/spring-boot-kafka
+https://github.com/spring-cloud/spring-cloud-stream-samples/tree/master/kafka-streams-samples - Stream samples
+https://github.com/HabeebCycle/spring-cloud-stream-implemention

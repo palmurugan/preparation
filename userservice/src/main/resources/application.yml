@@ -1,0 +1,50 @@
+## Spring related configurations
+spring:
+  application:
+    name: UserService
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/vs_user
+    username: root
+    password: root
+    ddl-auto: update
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 192.168.1.7:9092
+      bindings:
+        userConsumer-in-0:
+          destination: users
+          contentType: application/json
+          group: usersGroup
+        userProducer-out-0:
+          destination: users
+          contentType: application/json
+          producer:
+            requiredGroups: usersGroup
+
+## Keycloak configurations
+keycloak:
+  auth-server-url: http://192.168.1.7:8080/auth
+  realm: virtualstore
+  resource: vstore-services
+  ssl-required: external
+  public-client: false
+  credentials:
+    secret: 8ed2c521-1ff6-40e2-8e96-ba049bde295c
+  security-constraints[0]:
+    authRoles[0]: user
+    securityCollections[0]:
+      patterns[0]: /api/*
+
+## Logging
+logging:
+  level:
+    org:
+      springframework:
+        web: trace
+        security: trace
+      keycloak: trace
+
+server:
+  port: 8081
