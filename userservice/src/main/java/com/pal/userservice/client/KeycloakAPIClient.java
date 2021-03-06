@@ -58,7 +58,7 @@ public class KeycloakAPIClient implements IdentityServiceAPIClient {
   }
 
   @Override
-  public void saveUser(User user) {
+  public void createUser(User user) {
     logger.debug("Keycloak user creation process started: {}", user);
     Optional<UserRepresentation> userRepresentation = prepareUserRequest(user);
     Optional<CredentialRepresentation> credentialRepresentation = prepareCredential(user);
