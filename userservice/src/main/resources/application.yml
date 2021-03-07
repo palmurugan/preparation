@@ -6,7 +6,9 @@ spring:
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/vs_user
     username: root
     password: root
-    ddl-auto: update
+  jpa:
+    hibernate:
+      ddl-auto: update
   cloud:
     stream:
       kafka:
