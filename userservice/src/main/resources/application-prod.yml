@@ -23,6 +23,14 @@ spring:
           producer:
             requiredGroups: usersGroup
 
+#Eureka Configurations
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://192.168.1.7:8761/eureka}
+  instance:
+    preferIpAddress: true
+
 ## Keycloak configurations
 keycloak:
   auth-server-url: http://192.168.1.7:8080/auth

@@ -1,6 +1,6 @@
 ## Spring related configurations
 spring:
   application:
-    name: UserService
+    name: user-service
   profiles:
     active: dev

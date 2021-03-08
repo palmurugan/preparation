@@ -11,3 +11,26 @@ https://www.baeldung.com/role-and-privilege-for-spring-security-registration
 
 --- Keycloak
   -Djboss.socket.binding.port-offset=1000 // To change the port = 8080 + 1000 = 9080
+  
+  
+  
+- To start the zookeeper
+	bin/zookeeper-server-start.sh config/zookeeper.properties
+  
+- To start the kafka server
+	bin/kafka-server-start.sh config/server.properties
+
+- To create a topic
+	bin/kafka-topics.sh --create --topic users --bootstrap-server localhost:9092
+
+- To list all topics
+	bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+	
+- To produce the message
+	bin/kafka-console-producer.sh --topic users --bootstrap-server localhost:9092
+	
+- To consume the message
+	bin/kafka-console-consumer.sh --topic ud --from-beginning --bootstrap-server localhost:9092
+	
+	
+http://reactstorefronts.com/vendor/vendor-store
