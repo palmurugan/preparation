@@ -37,3 +37,8 @@ https://stackoverflow.com/questions/60002937/spring-webclient-call-two-dependent
 	
 http://reactstorefronts.com/vendor/vendor-store
 
+# Maven multi-module project creation
+	- Parent Project mvn archetype:generate -DgroupId=com.virtualstore -DartifactId=parent-project
+	- cd Parent Project
+	- mvn archetype:generate -DgroupId=com.virtualstore  -DartifactId=core
+	- mvn archetype:generate -DgroupId=com.virtualstore  -DartifactId=service
