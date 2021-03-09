@@ -1,3 +1,6 @@
+-Dspring-boot.run.profiles=qa
+mvn spring-boot:run -Drun.jvmArguments="-Xmx256m" -Dspring-boot.run.profiles=qa
+
 ## Keycloak admin client
 https://gist.github.com/thomasdarimont/c4e739c5a319cf78a4cff3b87173a84b
 

@@ -14,3 +14,26 @@ https://www.baeldung.com/role-and-privilege-for-spring-security-registration
 
 -- Reactive Composition
 https://stackoverflow.com/questions/60002937/spring-webclient-call-two-dependent-api
+=======
+  
+- To start the zookeeper
+	bin/zookeeper-server-start.sh config/zookeeper.properties
+  
+- To start the kafka server
+	bin/kafka-server-start.sh config/server.properties
+
+- To create a topic
+	bin/kafka-topics.sh --create --topic users --bootstrap-server localhost:9092
+
+- To list all topics
+	bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+	
+- To produce the message
+	bin/kafka-console-producer.sh --topic users --bootstrap-server localhost:9092
+	
+- To consume the message
+	bin/kafka-console-consumer.sh --topic ud --from-beginning --bootstrap-server localhost:9092
+	
+	
+http://reactstorefronts.com/vendor/vendor-store
+
