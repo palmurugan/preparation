@@ -11,3 +11,6 @@ https://www.baeldung.com/role-and-privilege-for-spring-security-registration
 
 --- Keycloak
   -Djboss.socket.binding.port-offset=1000 // To change the port = 8080 + 1000 = 9080
+
+-- Reactive Composition
+https://stackoverflow.com/questions/60002937/spring-webclient-call-two-dependent-api
