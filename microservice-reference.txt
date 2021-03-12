@@ -38,7 +38,16 @@ https://stackoverflow.com/questions/60002937/spring-webclient-call-two-dependent
 http://reactstorefronts.com/vendor/vendor-store
 
 # Maven multi-module project creation
-	- Parent Project mvn archetype:generate -DgroupId=com.virtualstore -DartifactId=parent-project
+	- Parent Project: mvn archetype:generate -DgroupId=com.virtualstore.product -DartifactId=product-service
+	- Change packaging to pom Ex: <packaging>pom</packaging>
 	- cd Parent Project
-	- mvn archetype:generate -DgroupId=com.virtualstore  -DartifactId=core
-	- mvn archetype:generate -DgroupId=com.virtualstore  -DartifactId=service
+	- mvn archetype:generate -DgroupId=com.virtualstore.product  -DartifactId=product-client
+	- mvn archetype:generate -DgroupId=com.com.virtualstore.product  -DartifactId=product-server
+	
+https://docs.mongodb.com/manual/tutorial/model-tree-structures-with-parent-references/
+
+return repository
+    .findById(userId)
+    .switchIfEmpty(Mono.error(NotFoundException("User not found")))
+    .flatMapIterable{ it.options }
+    .map { OptionDto.from(it) }
