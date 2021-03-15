@@ -1,22 +1,25 @@
 package com.virtualstore.product.dto;
 
-import java.math.BigDecimal;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@JsonInclude(Include.NON_NULL)
 public class ProductDTO {
 
-  private Long id;
+  private String id;
+  
+  private String categoryId;
 
-  private CategoryDTO category;
+  private String category;
 
   private String name;
 
-  private String description;
-
-  private BigDecimal price;
+  private String summary;
 
   private String status;
+
 }

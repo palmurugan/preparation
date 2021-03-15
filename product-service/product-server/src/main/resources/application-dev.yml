@@ -1,12 +1,8 @@
 ## Spring related configurations
 spring:
-  datasource:
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/vs_product
-    username: root
-    password: root
-  jpa:
-    hibernate:
-      ddl-auto: update
+  data:
+    mongodb:
+      uri: mongodb://192.168.1.7:27017/virtualstore
 
 #Eureka Configurations
 eureka:
@@ -30,3 +26,12 @@ keycloak:
     authRoles[0]: user
     securityCollections[0]:
       patterns[0]: /api/*
+
+## Logging
+logging:
+  level:
+    org:
+      springframework:
+        web: trace
+        security: trace
+      keycloak: trace
