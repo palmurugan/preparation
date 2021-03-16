@@ -1,0 +1,37 @@
+## Spring related configurations
+spring:
+  data:
+    mongodb:
+      uri: mongodb://192.168.1.7:27017/virtualstore
+
+#Eureka Configurations
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://192.168.1.7:8761/eureka}
+    enabled: false
+  instance:
+    preferIpAddress: true
+
+#Keycloak configurations
+keycloak:
+  auth-server-url: http://192.168.1.7:8080/auth
+  realm: virtualstore
+  resource: vstore-services
+  ssl-required: external
+  public-client: false
+  credentials:
+    secret: 8ed2c521-1ff6-40e2-8e96-ba049bde295c
+  security-constraints[0]:
+    authRoles[0]: user
+    securityCollections[0]:
+      patterns[0]: /api/*
+
+## Logging
+logging:
+  level:
+    org:
+      springframework:
+        web: trace
+        security: trace
+      keycloak: trace

@@ -1,0 +1,9 @@
+## Spring related configurations
+spring:
+  application:
+    name: inventory-service
+  profiles:
+    active: dev
+
+server:
+  port: 8083

@@ -32,7 +32,3 @@ build/
 ### VS Code ###
 .vscode/
 
-/product-client/product-client.iml
-/product-server/product-server.iml
-
-
