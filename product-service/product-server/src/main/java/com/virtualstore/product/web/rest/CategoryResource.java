@@ -38,6 +38,7 @@ public class CategoryResource {
   }
 
   @PutMapping
+  @ResponseStatus(HttpStatus.OK)
   public Mono<CategoryDTO> updateCategory(@RequestBody CategoryDTO categoryDTO) {
     Optional.of(categoryDTO).filter(category -> category.getId() != null).orElseThrow(
         () -> new BadRequestAlertException("Invalid Id", ENTITY_NAME, "id.notexists")
@@ -46,11 +47,13 @@ public class CategoryResource {
   }
 
   @GetMapping("/{id}")
+  @ResponseStatus(HttpStatus.OK)
   public Mono<CategoryDTO> findCategoryById(@PathVariable String id) {
     return categoryService.findById(id);
   }
 
   @GetMapping
+  @ResponseStatus(HttpStatus.OK)
   public Flux<CategoryDTO> findAll() {
     return categoryService.findAll();
   }
