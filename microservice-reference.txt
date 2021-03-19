@@ -46,6 +46,9 @@ http://reactstorefronts.com/vendor/vendor-store
 	
 https://docs.mongodb.com/manual/tutorial/model-tree-structures-with-parent-references/
 
+Functional Programming Pattern
+https://dzone.com/articles/functional-programming-patterns-with-java-8
+
 return repository
     .findById(userId)
     .switchIfEmpty(Mono.error(NotFoundException("User not found")))
