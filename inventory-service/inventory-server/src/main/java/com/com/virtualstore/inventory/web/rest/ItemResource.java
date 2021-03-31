@@ -57,6 +57,12 @@ public class ItemResource {
     return itemService.findById(id);
   }
 
+  @GetMapping("/products/{id}")
+  @ResponseStatus(HttpStatus.OK)
+  public Mono<ItemDTO> fetchByProductId(@PathVariable String id) {
+    return itemService.findByProductId(id);
+  }
+
   @GetMapping
   @ResponseStatus(HttpStatus.OK)
   public Flux<ItemDTO> fetchAll() {

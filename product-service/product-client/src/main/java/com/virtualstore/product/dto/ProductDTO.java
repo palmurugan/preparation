@@ -22,4 +22,8 @@ public class ProductDTO {
 
   private String status;
 
+  /*
+  sku, inStock, isVisible,taxCode,shippingCode, currency, amount, smallImageURL, largeImageURL(name, desc, lang),
+   */
+
 }

@@ -93,6 +93,21 @@
       <artifactId>problem-spring-webflux</artifactId>
       <version>${problem-spring-webflux.version}</version>
     </dependency>
+
+    <!-- Client Dependencies -->
+    <dependency>
+      <groupId>com.virtualstore.inventory</groupId>
+      <artifactId>inventory-client</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+    <!-- Common Dependencies -->
+    <dependency>
+      <groupId>com.virtualstore.reactive.common</groupId>
+      <artifactId>common-reactive-service</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+
   </dependencies>
   <dependencyManagement>
     <dependencies>

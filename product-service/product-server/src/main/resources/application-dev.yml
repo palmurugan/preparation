@@ -27,6 +27,11 @@ keycloak:
     securityCollections[0]:
       patterns[0]: /api/*
 
+## Remote gateway configuration
+application:
+  remoteAPI:
+    gatewayURL: http://localhost:8083
+
 ## Logging
 logging:
   level:

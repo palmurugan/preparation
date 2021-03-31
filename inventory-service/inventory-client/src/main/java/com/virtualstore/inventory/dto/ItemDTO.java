@@ -20,4 +20,6 @@ public class ItemDTO {
   private String unit;
 
   private String status;
+
+  private HistoryType type;
 }

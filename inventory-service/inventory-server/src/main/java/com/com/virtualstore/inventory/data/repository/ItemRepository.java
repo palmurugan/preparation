@@ -8,5 +8,7 @@ import reactor.core.publisher.Mono;
 @Repository
 public interface ItemRepository extends ReactiveMongoRepository<Item, String> {
 
-  Mono<Item> findByProductIdAndSku(String productId, String sku);
+  Mono<Item> findBySku(String sku);
+
+  Mono<Item> findByProductId(String productId);
 }
